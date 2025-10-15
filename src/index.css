@@ -1,0 +1,56 @@
+body {
+margin: 0;
+font-family: 'Inter', sans-serif;
+background-color: #0b0c10;
+color: #f5f6fa;
+}
+
+
+a {
+color: #4f6dff;
+text-decoration: none;
+transition: color 0.2s;
+}
+a:hover {
+color: #7aa2ff;
+}
+
+
+.card {
+background: #111319;
+border: 1px solid rgba(255,255,255,0.08);
+border-radius: 1rem;
+padding: 1.5rem;
+box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+transform: translateY(-3px);
+box-shadow: 0 8px 18px rgba(0,0,0,0.5);
+}
+
+
+section {
+max-width: 1000px;
+margin: 2rem auto;
+padding: 1.5rem;
+}
+
+
+h1, h2, h3 {
+color: #ffffff;
+}
+
+
+button {
+background: #003DA5;
+border: none;
+color: #fff;
+padding: 0.6rem 1.2rem;
+border-radius: 0.6rem;
+cursor: pointer;
+transition: background 0.2s;
+}
+button:hover {
+background: #1d54c9;
+}

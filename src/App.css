@@ -1,0 +1,477 @@
+/* === Global Styles === */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #000428 0%, #004e92 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* === General Layout === */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* === Profile Section === */
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #4b6cff;
+  margin-top: 20px;
+  object-fit: cover;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #ffffff;
+}
+
+.subtitle {
+  max-width: 700px;
+  color: #cccccc;
+  font-size: 1.1rem;
+  margin: 15px 0 30px;
+  line-height: 1.6;
+}
+
+/* === Buttons === */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.btn {
+  background-color: #4b6cff;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3450b5;
+  transform: scale(1.05);
+}
+
+/* === Card Section === */
+.nav-card-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.nav-card-section h2 {
+  font-size: 1.8rem;
+  color: #4b6cff;
+  margin-bottom: 25px;
+  text-shadow: 0px 0px 6px rgba(75, 108, 255, 0.5);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+/* === Navigation Cards === */
+.nav-card {
+  background-color: rgba(20, 20, 30, 0.9);
+  border-radius: 14px;
+  padding: 25px;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.nav-card:hover {
+  transform: translateY(-6px);
+  background-color: #1e1e2f;
+  box-shadow: 0 8px 18px rgba(75, 108, 255, 0.5);
+}
+
+.nav-card h3 {
+  color: #4b6cff;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.nav-card p {
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
+
+  .nav-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* === Burger Icon === */
+.burger {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.burger .bar {
+  height: 3px;
+  width: 100%;
+  background: rgba(255, 255, 255, 1) !important;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: brightness(200%) !important;
+  z-index: 9999 !important;
+}
+.burger:hover .bar {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+
+/* === Sidebar === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 240px;
+  height: 100vh;
+  background: rgba(10, 15, 30, 0.97) !important;  /* deep dark navy */
+  backdrop-filter: blur(6px);
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.6);
+  transition: right 0.3s ease;
+  z-index: 9998;
+  padding-top: 60px;
+  color: #ffffff !important;
+}
+.sidebar.open {
+  right: 0;
+}
+
+/* === Close Button === */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;              /* ← move from right to left */
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.2s;
+  z-index: 10000;          /* keep it on top of everything */
+}
+.close-btn:hover {
+  color: #4b6cff;
+}
+
+
+/* === Extra Mobile Spacing === */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 20px 10px;
+  }
+}
+/* === About Page === */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.about-card {
+  background-color: rgba(20, 20, 30, 0.9);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  color: #ffffff;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b6cff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(75, 108, 255, 0.3);
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .about-card {
+    padding: 1.5rem;
+  }
+  .about-title {
+    font-size: 1.6rem;
+  }
+  .about-text {
+    font-size: 1rem;
+  }
+}
+/* === Shared Page Layout === */
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 2rem;
+}
+
+.page-card {
+  background-color: rgba(20, 20, 30, 0.9);
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  color: #ffffff;
+  width: 90%;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b6cff;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px rgba(75, 108, 255, 0.3);
+}
+
+/* === Experience Page === */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.experience-item {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+.experience-role {
+  font-size: 1.3rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+.experience-org {
+  color: #aaaaaa;
+  margin-bottom: 0.3rem;
+}
+.experience-time {
+  color: #888888;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.experience-desc {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* === Hobbies Page === */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.hobby-item {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+.hobby-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-4px);
+}
+.hobby-title {
+  color: #4b6cff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.hobby-desc {
+  color: #cccccc;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* === Contact Page === */
+.contact-text {
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+.contact-link {
+  color: #ffffff;
+  margin-bottom: 0.8rem;
+}
+.highlight-link {
+  color: #4b6cff;
+  text-decoration: none;
+}
+.highlight-link:hover {
+  text-decoration: underline;
+}
+
+/* === Mobile Adjustments === */
+@media (max-width: 768px) {
+  .page-card {
+    padding: 1.5rem;
+  }
+  .page-title {
+    font-size: 1.6rem;
+  }
+}
+/* === Resume Page === */
+.resume-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-intro {
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.resume-viewer {
+  width: 100%;
+  max-width: 750px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #4b6cff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #3450b5;
+  transform: scale(1.05);
+}
+/* === Resume Page === */
+.resume-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-intro {
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  text-align: center;
+}
+
+.resume-viewer {
+  width: 100%;
+  max-width: 750px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  background-color: #111319;
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons Layout */
+.resume-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.download-btn,
+.view-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #4b6cff;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover,
+.view-btn:hover {
+  background-color: #3450b5;
+  transform: scale(1.05);
+}
+
+/* Alternate style for View button */
+.view-btn {
+  background-color: #333;
+}
+.view-btn:hover {
+  background-color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-viewer {
+    height: 400px;
+  }
+}
