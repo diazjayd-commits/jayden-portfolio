@@ -2,7 +2,7 @@ import React from 'react';
 
 const hobbies = [
   { title: 'Web Development', desc: 'Building React apps and experimenting with UI frameworks.' },
-  { title: 'Gaming & Modding', desc: 'Creating Minecraft servers and optimizing performance.' },
+  { title: 'Gym', desc: 'Working out and teaching peers on how to workout efficiently' },
   { title: 'PC Hardware', desc: 'Upgrading, troubleshooting, and tuning custom PCs.' }
 ];
 
